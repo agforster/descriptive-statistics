@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Code Blocks – Descriptive Statistics</title>
+<title>Calculating summary statistics of variables – Descriptive Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../tutorials/summarizing-data-baseR/summary-function.html" rel="next">
+<link href="../../tutorials/summarizing-data-baseR/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -404,7 +406,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"fit <- lm(Petal.Length ~ Petal.Width, data = iris)\nsummary(fit)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"confint(fit)","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"sqrt(x)","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -1762,7 +1764,7 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Code Blocks</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/index.html">Summarizing Data</a></li><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/mean-min-max.html">Mean, minimum and maximum</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1791,37 +1793,67 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/frequency-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/prop-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/cum-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cumulative Proportion Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/cbind-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readable Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">tutorials/summarizing-data-baseR/index.qmd</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../tutorials/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/summarizing-data-baseR/mean-min-max.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Mean, minimum and maximum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/describe-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describe function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
@@ -1837,18 +1869,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#code-blocks" id="toc-code-blocks" class="nav-link active" data-scroll-target="#code-blocks">Code Blocks</a>
-  <ul class="collapse">
-  <li><a href="#code-block-environments" id="toc-code-block-environments" class="nav-link" data-scroll-target="#code-block-environments">Code Block Environments</a></li>
-  <li><a href="#inline-code" id="toc-inline-code" class="nav-link" data-scroll-target="#inline-code">Inline Code</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -2137,9 +2159,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/index.html">Summarizing Data</a></li><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/mean-min-max.html">Mean, minimum and maximum</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Code Blocks</h1>
+<h1 class="title">Calculating summary statistics of variables</h1>
 </div>
 
 
@@ -2156,67 +2178,65 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>This is the first topic file for Tutorial 1.</p>
-<ul>
-<li>Such topic files should cover one substantively meaningful chunk of content.</li>
-</ul>
-<section id="code-blocks" class="level2">
-<h2 class="anchored" data-anchor-id="code-blocks">Code Blocks</h2>
-<p>Use <strong>knitr</strong> code blocks to include non-interactive R code.</p>
+<p>The examples in this lesson are based on a dataset about profits from stocks and bonds. First, we have a look at the dataset:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Add 2 and 2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(stocks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Divide 225 by 15 and print the result</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(x <span class="ot">&lt;-</span> <span class="dv">225</span> <span class="sc">/</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 15</code></pre>
+<p>This is what we see:</p>
+<p><img src="../../assets/figures/view_stocks.png" class="img-fluid"> The dataset contains information about the average change in the price of stocks and bonds during the period 1928-2015. Below is a description of the variables that can be found in the dataset.</p>
+<ul>
+<li><strong>YEAR</strong>: the year</li>
+<li><strong>TBONDS</strong>: Price of Treasury Bonds, US government bonds. For example, a figure of 4 means an increase of 4%.</li>
+<li><strong>SPSTOCKS</strong>: S&amp;P 500 Stocks price, shares of the 500 largest US companies. For example, a figure of 44 means an increase of 44%.</li>
+<li><strong>TBONDS_D</strong>: Indicates whether Treasury Bonds rose (1) or fell/remained the same (0) that year.</li>
+<li><strong>SPSTOCKS_D</strong>: Indicates whether the S&amp;P 500 stocks rose (1) or fell/remained the same (0) that year.</li>
+</ul>
+<p>We will explore this dataset. At the start, we are interested to get more information about our collected variables. In most cases, we want at least to know the following parameters:</p>
+<ul>
+<li>the mean</li>
+<li>the standard deviation</li>
+<li>the range (minimum and maximum)</li>
+</ul>
+<p>For this purpose, R provides the following functions:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>()</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can use these for a single variable (at a time). You can call up each variable by adding $‘variable name’ after the name of the data frame.</p>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
 </div>
 </div>
-<p>Use <strong>quarto-webr</strong> code blocks for interactive R exercises.</p>
+<div class="callout-body-container callout-body">
+<p>Try requesting the mean of TBONDS from the Stocks dataset.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="code-block-environments" class="level3">
-<h3 class="anchored" data-anchor-id="code-block-environments">Code Block Environments</h3>
-<p>A single execution environment is shared across code blocks of the same type.</p>
-<ul>
-<li>All the <strong>knitr</strong> code blocks in a QMD file will share an evaluation environment.</li>
-<li>Likewise for the <strong>quarto-webr</strong> code blocks</li>
-</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(stocks<span class="sc">$</span>TBONDS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 225</code></pre>
+<pre><code>[1] 5.215909</code></pre>
 </div>
 </div>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>knitr</strong> and <strong>quarto-webr</strong> code blocks to not share the same environment, though.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">resid</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error: object 'fit' not found</code></pre>
 </div>
 </div>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>If you want to share objects across code chunk types (e.g., to pose a practice problem using objects created in a <strong>knitr</strong> chunk), you can regenerate the required objects using a hidden code chunk of the appropriate type.</p>
-<ul>
-<li>Don’t forget to set an appropriate seed, if you’re trying to regenerate a stochastic object.</li>
-</ul>
-</section>
-<section id="inline-code" class="level3">
-<h3 class="anchored" data-anchor-id="inline-code">Inline Code</h3>
-<p>Use <strong>knitr</strong> inline code chunks to embed R output in text blocks.</p>
-<ul>
-<li>E.g., R says the squareroot of 2 is 1.4142136.</li>
-</ul>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2625,6 +2645,18 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/summarizing-data-baseR/index.html" class="pagination-link" aria-label="Summarizing Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Summarizing Data</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/summarizing-data-baseR/summary-function.html" class="pagination-link" aria-label="Summary function">
+        <span class="nav-page-text">Summary function</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

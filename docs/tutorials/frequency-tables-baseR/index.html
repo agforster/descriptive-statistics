@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/frequency-tables-baseR/topic1.html" rel="next">
+<link href="../../tutorials/frequency-tables-baseR/frequency-table.html" rel="next">
 <link href="../../index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -72,19 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -109,6 +96,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -205,28 +205,40 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/frequency-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/prop-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/cum-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cumulative Proportion Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/cbind-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readable Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">tutorials/summarizing-data-baseR/index.qmd</span></a>
+            <a href="../../tutorials/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -234,8 +246,26 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/summarizing-data-baseR/mean-min-max.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mean, minimum and maximum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/describe-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describe function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
@@ -278,13 +308,14 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 
 <p>In this tutorial, you will learn:</p>
 <ul>
-<li>How to create a frequency table in R</li>
+<li><p>How to create a frequency table in R</p></li>
+<li><p>How to calculate proportions and cumulative proportions in a table</p></li>
+<li><p>How to make your table readable</p></li>
 </ul>
 <p>We assume that you already know:</p>
 <ul>
 <li><p>What measurement levels are</p></li>
 <li><p>How to open a dataset (.csv) in R</p></li>
-<li><p>What a frequency table is</p></li>
 </ul>
 
 
@@ -703,8 +734,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/frequency-tables-baseR/topic1.html" class="pagination-link" aria-label="First Topic">
-        <span class="nav-page-text">First Topic</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/frequency-tables-baseR/frequency-table.html" class="pagination-link" aria-label="Tables">
+        <span class="nav-page-text">Tables</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

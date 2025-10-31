@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Divs &amp; Callouts – Descriptive Statistics</title>
+<title>The summary function – Descriptive Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../tutorials/summarizing-data-baseR/describe-function.html" rel="next">
+<link href="../../tutorials/summarizing-data-baseR/mean-min-max.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -404,7 +406,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -1658,19 +1660,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -1679,6 +1668,32 @@ div.callout-reading.callout-style-default > .callout-header {
 }
 div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
@@ -1697,26 +1712,13 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
 </style>
 
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1762,7 +1764,7 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Divs &amp; Callouts</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/index.html">Summarizing Data</a></li><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/summary-function.html">Summary function</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1791,37 +1793,67 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/frequency-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/prop-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/cum-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cumulative Proportion Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/cbind-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readable Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">tutorials/summarizing-data-baseR/index.qmd</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../tutorials/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/summarizing-data-baseR/mean-min-max.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mean, minimum and maximum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary-function.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Summary function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/describe-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describe function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
@@ -1837,25 +1869,11 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link active" data-scroll-target="#callout-blocks">Callout Blocks</a>
-  <ul class="collapse">
-  <li><a href="#custom-callouts" id="toc-custom-callouts" class="nav-link" data-scroll-target="#custom-callouts">Custom Callouts</a></li>
-  <li><a href="#practice-callouts" id="toc-practice-callouts" class="nav-link" data-scroll-target="#practice-callouts">Practice Callouts</a></li>
-  </ul></li>
-  <li><a href="#using-the-website-margin" id="toc-using-the-website-margin" class="nav-link" data-scroll-target="#using-the-website-margin">Using the Website Margin</a>
-  <ul class="collapse">
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script>
 <script type="module" id="qwebr-monaco-editor-init">
 
@@ -2141,9 +2159,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/index.html">Summarizing Data</a></li><li class="breadcrumb-item"><a href="../../tutorials/summarizing-data-baseR/summary-function.html">Summary function</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Divs &amp; Callouts</h1>
+<h1 class="title">The summary function</h1>
 </div>
 
 
@@ -2160,260 +2178,89 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>This is the second topic file for Tutorial 1.</p>
-<section id="callout-blocks" class="level2">
-<h2 class="anchored" data-anchor-id="callout-blocks">Callout Blocks</h2>
-<p>Use callout blocks to highlight special information.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note Title
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Something noteworthy.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip Title
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Here’s a tip for ya…</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important Title
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is very important!</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning Title
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You’ve been warned.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution Title
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Proceed with caution.</p>
-</div>
-</div>
-<section id="custom-callouts" class="level3">
-<h3 class="anchored" data-anchor-id="custom-callouts">Custom Callouts</h3>
-<p>This project uses the <a href="https://quarto.thecoatlessprofessor.com/custom-callout/">quarto-custom-callout</a> extension to provide some bespoke callout blocks. This template already defines four such blocks.</p>
-<p>A <em>reading</em> callout to highlight relevant, recommended literature.</p>
-<ul>
-<li>I.e., These sources would be the required reading in a classroom context.</li>
-</ul>
-<div class="callout callout-style-default callout-reading callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Reading
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://r4ds.hadley.nz/workflow-basics.html">R4DS 2: Workflow Basics</a></p>
-</div>
-</div>
-<p>A <em>reading-advanced</em> callout to highlight relevant, but technically challanging, literature.</p>
-<ul>
-<li>I.e., These sources would be supplementary reference materials but not required reading in a classroom context.</li>
-</ul>
-<div class="callout callout-style-default callout-reading-advanced callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Advanced Reading
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://adv-r.hadley.nz/names-values.html#binding-basics">Advanced R 2.2: Binding Basics</a></p>
-</div>
-</div>
-<p>A <em>resource</em> callout to highlight related external resources.</p>
-<div class="callout callout-style-default callout-resource callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-External Resources
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For a different take on these ideas, check out Andrew Heiss’ R Primers tutorial on the topic</p>
-<ul>
-<li><a href="https://r-primers.andrewheiss.com/basics/02-programming-basics/">R Primers: Programming Basics</a></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="practice-callouts" class="level3">
-<h3 class="anchored" data-anchor-id="practice-callouts">Practice Callouts</h3>
-<p>The custom <em>practice</em> callout is reserved for inline practice problems.</p>
-<ul>
-<li>The <code>panel-tabset</code> div nested within the <code>practice</code> div creates a set of tabs to organize the exercise components.</li>
-<li>Each Level 2 heading inside the <code>panel-tabset</code> div defines a new tab.
-<ul>
-<li>In the examples below, the tab titles are specified through quarto shortcode variables.</li>
-<li>These variables are defined in the <code>_variables.yml</code> metadata file.</li>
-</ul></li>
-</ul>
+<p>We can also make it clearer by using the summary() command from ‘base R’ (i.e.&nbsp;without installing packages). You can use this on your entire dataset at once.</p>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example Code Exercise
+Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li>Regress <code>Petal.Width</code> onto <code>Species</code> using the <code>iris</code> dataset.</li>
-<li>Create a normal Q-Q plot of the residuals.</li>
-</ol>
+<p>Try requesting the summary statistics for the entire stocks dataset.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Remember what happens when you call the Base R <code>plot()</code> function on a fitted lm object.</p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<ol type="1">
-<li>First, we’ll use the <code>lm()</code> function to estimate the model.</li>
-</ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Petal.Width <span class="sc">~</span> Species, <span class="at">data =</span> iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol type="1">
-<li>Then, we’ll use the default plotting method for lm objects to create the Q-Q plot.</li>
-</ol>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit1, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="summary-statistics_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(stocks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      YEAR          TBONDS           SPSTOCK          TBONDS_D     
+ Min.   :1928   Min.   :-11.000   Min.   :-44.00   Min.   :0.0000  
+ 1st Qu.:1950   1st Qu.:  1.000   1st Qu.: -1.00   1st Qu.:1.0000  
+ Median :1972   Median :  3.500   Median : 14.00   Median :1.0000  
+ Mean   :1972   Mean   :  5.216   Mean   : 11.42   Mean   :0.7955  
+ 3rd Qu.:1993   3rd Qu.:  8.250   3rd Qu.: 25.25   3rd Qu.:1.0000  
+ Max.   :2015   Max.   : 33.000   Max.   : 53.00   Max.   :1.0000  
+   SPSTOCK_D     
+ Min.   :0.0000  
+ 1st Qu.:0.0000  
+ Median :1.0000  
+ Mean   :0.7159  
+ 3rd Qu.:1.0000  
+ Max.   :1.0000  </code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>If you want to retrieve descriptive statistics for multiple variables, you can use the entire data frame as an argument for summary(). You can also select a subset of variables (columns) by using, for example, stocks[1:3] as an argument to select the first three columns or stocks[c(1,2,4)] to select column 1, 2 and 4. Try it out!</p>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example Theory Question
+Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Try requesting the summary statistics for column 2 and 5 of stocks.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-circle-question" aria-label="circle-question"></i> Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>What is the answer to life, the universe, and everything?</p>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>42</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(stocks[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      YEAR        SPSTOCK_D     
+ Min.   :1928   Min.   :0.0000  
+ 1st Qu.:1950   1st Qu.:0.0000  
+ Median :1972   Median :1.0000  
+ Mean   :1972   Mean   :0.7159  
+ 3rd Qu.:1993   3rd Qu.:1.0000  
+ Max.   :2015   Max.   :1.0000  </code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="using-the-website-margin" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="using-the-website-margin">Using the Website Margin</h2>
-<p>In the previous section, all callout blocks are placed in the website body. In most cases, however, callout blocks are better placed in the website margin.</p>
-<ul>
-<li>Placing supporting elements like links, callouts, and references in the margin streamlines the main body content while keeping the supporting information near the relevant main body content.</li>
-</ul>
-<p>To place content in the website margine, we use the <code>column-margin</code> div.</p>
-<section id="example" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida bibendum ex, quis cursus risus vestibulum vel. Aliquam hendrerit in enim in suscipit. Nunc at fringilla velit, a faucibus tellus. Etiam mollis, massa id finibus volutpat, tellus nulla egestas mauris, id tempus sem ipsum quis neque. Pellentesque sodales pharetra nulla id sodales. Vestibulum tincidunt orci in sem malesuada, in malesuada odio lacinia. Integer sodales, quam eu imperdiet commodo, est ipsum interdum risus, et volutpat mi justo blandit est. Donec non nisl lobortis, vestibulum lorem non, iaculis felis. Curabitur tempus sagittis volutpat. Nam dignissim eros ac gravida ultricies. Curabitur velit nisl, cursus in lobortis id, porttitor in massa. Vestibulum commodo, turpis vitae laoreet efficitur, diam sem consectetur felis, non pulvinar magna elit id justo. Duis tincidunt id massa eget lacinia.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-</div>
-</div></div><p>Nam vulputate tellus metus, id pretium nisi congue eu. Ut ornare, sem id cursus suscipit, dui purus efficitur urna, id auctor magna diam quis lorem. Cras venenatis id dui at rhoncus. Donec consequat nulla vel arcu vestibulum, ac posuere leo venenatis. Praesent fermentum est ac lorem condimentum, gravida volutpat velit sagittis. Cras ac egestas nisi. Duis eget luctus quam. Donec consectetur neque nec egestas ultricies.</p>
 
 
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="callout callout-style-default callout-resource callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-External Resources
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Wikipedia: Central Limit Theorem</a></p>
-</div>
-</div>
-</div></div></section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2822,6 +2669,18 @@ External Resources
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/summarizing-data-baseR/mean-min-max.html" class="pagination-link" aria-label="Mean, minimum and maximum">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Mean, minimum and maximum</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/summarizing-data-baseR/describe-function.html" class="pagination-link" aria-label="Describe function">
+        <span class="nav-page-text">Describe function</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

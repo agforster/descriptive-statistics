@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/summarizing-data-baseR/topic1.qmd" rel="next">
-<link href="../../tutorials/frequency-tables-baseR/topic2.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -72,19 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -109,6 +94,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -176,7 +174,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/frequency-tables-baseR/index.html">Frequency Tables</a></li><li class="breadcrumb-item"><a href="../../quizzes/frequency-tables-baseR/index.html">Knowledge Quiz</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Knowledge Quiz: Tutorial 2</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -198,35 +196,47 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <div class="sidebar-item-container"> 
             <a href="../../tutorials/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Frequency Tables</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/frequency-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/frequency-tables-baseR/topic2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/prop-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/frequency-tables-baseR/cum-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cumulative Proportion Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/cbind-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readable Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/frequency-tables-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">tutorials/summarizing-data-baseR/index.qmd</span></a>
+            <a href="../../tutorials/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -234,8 +244,26 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../quizzes/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../tutorials/summarizing-data-baseR/mean-min-max.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mean, minimum and maximum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/describe-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describe function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tutorials/summarizing-data-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
@@ -257,7 +285,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/frequency-tables-baseR/index.html">Frequency Tables</a></li><li class="breadcrumb-item"><a href="../../quizzes/frequency-tables-baseR/index.html">Knowledge Quiz</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Knowledge Quiz: Tutorial 2</h1>
 </div>
@@ -297,15 +325,14 @@ Note
 </div></div><div class="cell" data-layout-align="center">
 <div class="webex-question">
 <div class="webex-check webex-box">
-<p>Yes or No?</p>
-<div id="webex-5f911a179df7a9af4e81c6a378e1f45c" class="webex-radiogroup" data-answer="blcVAR1RHQcVVDs=">
-<label><input type="radio" autocomplete="off" name="5f911a179df7a9af4e81c6a378e1f45c"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="5f911a179df7a9af4e81c6a378e1f45c"><span>No</span></label><label><input type="radio" autocomplete="off" name="5f911a179df7a9af4e81c6a378e1f45c"><span>No</span></label><label><input type="radio" autocomplete="off" name="5f911a179df7a9af4e81c6a378e1f45c"><span>Yes</span></label><label><input type="radio" autocomplete="off" name="5f911a179df7a9af4e81c6a378e1f45c"><span>Yes</span></label>
+<p>What percentage of the total number of songs in the Guardian list are about ‘People_and_places’?</p>
+<div id="webex-7c7d38eb2e64d0a2fa880bba5ab912fc" class="webex-radiogroup" data-answer="bFIbVB8ISVJv">
+<label><input type="radio" autocomplete="off" name="7c7d38eb2e64d0a2fa880bba5ab912fc"><span>14.5</span></label><label><input type="radio" autocomplete="off" name="7c7d38eb2e64d0a2fa880bba5ab912fc"><span>13.1</span></label><label><input type="radio" autocomplete="off" name="7c7d38eb2e64d0a2fa880bba5ab912fc"><span>13.9</span></label><label><input type="radio" autocomplete="off" name="7c7d38eb2e64d0a2fa880bba5ab912fc"><span>&lt;NA</span></label>
 </div>
 </div>
 <div class="webex-solution">
 <ul>
 <li>Correct</li>
-<li>Wrong</li>
 <li>Wrong</li>
 <li>Wrong</li>
 <li>Wrong</li>
@@ -723,18 +750,6 @@ Note
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../tutorials/frequency-tables-baseR/topic2.html" class="pagination-link" aria-label="Second Topic">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Second Topic</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../tutorials/summarizing-data-baseR/topic1.qmd" class="pagination-link" aria-label="">
-        <span class="nav-page-text"></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

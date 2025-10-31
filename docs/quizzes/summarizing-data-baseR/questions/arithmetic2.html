@@ -96,19 +96,6 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
-  background-image: none;
-}
 div.callout-reading.callout {
   border-left-color: purple;
 }
@@ -120,6 +107,19 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -232,28 +232,40 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/frequency-tables-baseR/topic1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">First Topic</span></a>
+  <a href="../../../tutorials/frequency-tables-baseR/frequency-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../tutorials/frequency-tables-baseR/topic2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Second Topic</span></a>
+  <a href="../../../tutorials/frequency-tables-baseR/prop-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../quizzes/frequency-tables-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../../tutorials/frequency-tables-baseR/cum-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cumulative Proportion Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/frequency-tables-baseR/cbind-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Readable Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/frequency-tables-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">tutorials/summarizing-data-baseR/index.qmd</span></a>
+            <a href="../../../tutorials/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summarizing Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -261,8 +273,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../quizzes/summarizing-data-baseR/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Knowledge Quiz</span></a>
+  <a href="../../../tutorials/summarizing-data-baseR/mean-min-max.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mean, minimum and maximum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/summarizing-data-baseR/summary-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/summarizing-data-baseR/describe-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Describe function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tutorials/summarizing-data-baseR/summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
   </div>
 </li>
       </ul>
@@ -299,17 +329,17 @@ window.Quarto = {
 <h1>Question</h1>
 <p>What is the value of <span class="math inline">\(x\)</span> in the following equation?</p>
 <p><span class="math display">\[
-x = \frac{3 + 3}{2}
+x = \frac{2 + 3}{5}
 \]</span></p>
 <p>Round your answer to two decimal places.</p>
 </section>
 <section id="solution" class="level1">
 <h1>Solution</h1>
-<p>After rounding, we get 3.00.</p>
+<p>After rounding, we get 1.00.</p>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Arithmetic extype: num exsolution: 3.00 extol: 0.01</p>
+<p>exname: Arithmetic extype: num exsolution: 1.00 extol: 0.01</p>
 
 
 </section>

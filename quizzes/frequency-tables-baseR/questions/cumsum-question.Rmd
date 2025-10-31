@@ -1,19 +1,13 @@
 Question
 ========
-Yes or No?
+Which proportion of songs was created before the year 2000?
 
 Answerlist
 ----------
-* Yes
-* Yes
-* Yes
-* Yes
-* Yes
-* No
-* No
-* No
-* No
-* No
+* 0.876
+* 0.888
+* 876
+* 888
 
 Solution
 ========
@@ -24,16 +18,10 @@ Answerlist
 * Wrong
 * Wrong
 * Wrong
-* Wrong
-* Wrong
-* Wrong
-* Wrong
-* Wrong
-* Wrong
 
 Meta-information
 ================
 exname: Bad Question
 extype: schoice
-exsolution: 1000000000
-exshuffle: 5
+exsolution: 0010
+exshuffle: 4

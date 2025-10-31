@@ -15,7 +15,7 @@ Welcome to the *Descriptive Statistics* module! In this module, you will learn a
 1. [Frequency tables](/tutorials/frequency-tables-baseR/index.qmd)
 1. [Summarizing data](/tutorials/summarizing-data-baseR/index.qmd) 
 
-Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. Each tutorial section is wrapped up with a knowledge quiz.
+Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout.
 
 ## Learning Goals
 

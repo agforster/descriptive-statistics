@@ -1,0 +1,9 @@
+---
+title: "Summary"
+---
+
+In this tutorial we covered how to request descriptive statistics in R
+
+-   Using mean(), min(), max(), and sd() for a single variable
+-   Using summary() for an entire dataset or a selection of variables
+-   And using describe() from the psych library for slightly different descriptive statistics

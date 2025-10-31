@@ -17,7 +17,7 @@ title: "Knowledge Quiz: Tutorial 2"
 
 exams2forms::exams2forms(
   file = list(
-    "bad_question.Rmd"
+    "prop-table_question.Rmd"
   ),
   edir = here::here("quizzes", "frequency-tables-baseR", "questions")
 )
